@@ -1,0 +1,160 @@
+<!--
+  Copyright 2012 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources>
+    <!-- Titles -->
+    <string name="app_name">Sample Issuer</string>
+    <string name="server">SERVER :</string>
+    <string name="debug_mode">DEBUG MODE :</string>
+
+    <!-- api options -->
+    <string name="call_get_samsung_pay_first">To use other APIs, you must click getSamsungPayStatus button first.</string>
+    <string name="no_card_for_the_request">There is no card for your request.</string>
+    <string name="get_samsung_pay_status">getSamsungPayStatus</string>
+    <string name="activate_samsung_pay">activateSamsungPay</string>
+    <string name="get_wallet_info_and_update_payload">Call getWalletInfo, and update payload</string>
+    <string name="get_all_cards">getAllCards</string>
+    <string name="get_octopus_card">get Octopus card</string>
+    <string name="verify_card_idv">verifyCardIdv</string>
+    <string name="select_card_to_verify_card_idv">Select a card to verify card IDnV.</string>
+    <string name="start_simple_pay">startSimplePay</string>
+    <string name="start_deep_link">startDeepLink</string>
+    <string name="add_card">addCard</string>
+    <string name="add_card_title">Add Card</string>
+    <string name="token_provider">Token provider:</string>
+    <string name="get_wallet_info_required">For VISA, getWalletInfo API MUST be used.
+        String values returned from getWalletInfo should be used for clientDeviceID and clientWalletAccountID</string>
+    <string name="enroll_payload_format_example_notice">Network provider has its own requirement for push provision.
+        So, please read card network spec document carefully. Samsung cannot help about enrollment payload.
+        FYI, the data from here is only for example.
+    </string>
+    <string name="payload_or_provider_is_empty">Payload or TokenizationProvider is empty</string>
+    <string name="encrypted_payload_example_data">ThisIsTestPayloadCardInfo1234567890=</string>
+    <string name="payload_non_encrypted">Payload before encryption (Example purpose only):</string>
+    <string name="payload_encrypted_guide_title">Payload encrypted (Example purpose only):</string>
+    <string name="payload_encrypted_base64_mastercard">Payload Base64 encrypted (Example purpose only):</string>
+    <string name="notice_provider_and_encrypted_payload_should_be_passed_to_add_card_api">
+        Notice! Only tokenization provider and encrypted payload should be delivered to Samsung Pay via addCard API.</string>
+    <string name="start_simple_pay_for_refund">startSimplePay (Refund)</string>
+    <string name="select_card_to_start_simple_pay_for_refund">Select a card to start simple pay for refund.</string>
+    <string name="select_card_to_start_deep_link">Select a card to launch deep link for card</string>
+    <string name="update_additional_service">updateAdditionalService</string>
+    <string name="request_refund">Request refund</string>
+
+    <string name="card_id">Card ID</string>
+    <string name="card_status">Card status</string>
+    <string name="card_issuer">Card issuer</string>
+    <string name="card_type">Card type</string>
+    <string name="card_last_4_dpan">Last 4 DPAN:</string>
+    <string name="card_last_4_fpan">Last 4 FPAN:</string>
+    <string name="card_brand">Card brand</string>
+    <string name="select_card_to_start_simple_pay">Select a card to start simple pay.</string>
+    <string name="is_samsung_pay_card">Samsung Pay Card</string>
+
+    <string name="country_global">Global</string>
+    <string name="country_us">US</string>
+    <string name="country_kr">KR</string>
+    <string name="go_to_update_page">goToUpdatePage</string>
+
+    <string name="transaction_date">Transaction Date : </string>
+    <string name="transaction_date_hint">yyyyMMddHHmm</string>
+    <string name="transaction_number">Transaction Number (max length 14): </string>
+    <string name="transaction_type">Transaction Type :</string>
+
+    <string name="pref_watchMode">watchMode</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="samsung_pay_is_not_supported">Samsung Pay is not supported!</string>
+    <string name="samsung_pay_is_not_ready">Samsung Pay is not ready!</string>
+    <string name="samsung_pay_is_ready">Samsung Pay is ready!</string>
+    <string name="samsung_pay_is_not_allowed_temporally">Samsung Pay is not allowed temporally!</string>
+    <string name="go_to_samsung_pay_update_popup_title">Go to Samsung Pay update</string>
+    <string name="go_to_samsung_pay_start_popup_title">Go to Samsung Pay start</string>
+    <string name="partner_did_not_set_service_type">Partner did not set SERVICE TYPE</string>
+    <string name="octopus">Octopus</string>
+    <string name="all">ALL</string>
+    <string name="check_card_list_first">You need to check Octopus card list first</string>
+    <string name="transaction_id">Transaction ID</string>
+    <string name="operation_type">Operation Type</string>
+    <string name="additional_service_data">Additional Data</string>
+    <string name="data_description">Description</string>
+    <string name="card_balance">Card Balance</string>
+
+    <string name="card_filter_radio_button">Card Filter Radio button</string>
+    <string name="card_list_size">Card List: </string>
+    <string name="mandatory_field">Mandatory field</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="verification_code">verification code :</string>
+
+    <string name="encrypt_token_using_encryption_key">Encrypt token using getTokenEncryptionKey</string>
+    <string name="sign_token_using_end_entity_ca">Sign token using End-entity CA</string>
+    <string name="certificate_example">-----BEGIN CERTIFICATE-----\r\nxxx\r\n-----END CERTIFICATE-----</string>
+    <string name="stop_mst">stopMST</string>
+    <string name="start_mst">startMST</string>
+    <string name="start_mst_success">startMST success</string>
+    <string name="stop_mst_success">stopMST success</string>
+    <string name="stop_mst_failure">stopMST failure</string>
+
+    <string name="ott">OTT (plain text):</string>
+    <string name="plain_token_hint">;111122223..=11111111..?</string>
+    <string name="encrypted_token">encrypted token:</string>
+    <string name="signed_token">signed token:</string>
+    <string name="intermediate_ca">intermediate CA:</string>
+    <string name="end_entity_ca">end entity CA:</string>
+    <string name="duration_time">duration time:</string>
+    <string name="send_transaction_result_info">sendTransactionResultInfo</string>
+    <string name="get_samsung_pay_transit_status">getTransitCardStatus</string>
+    <string name="unit_milliseconds">milliseconds</string>
+    <string name="has_transit_card">has transit card</string>
+    <string name="no_transit_card">no transit card</string>
+    <string name="check_octopus_dummyData">Show Octopus GUI with dummy data</string>
+    <string name="gui_test_description">It\'s a test description for GUI checking</string>
+
+    <string name="is_retry">isRetry</string>
+    <string name="extra_data">extraData</string>
+    <string name="merchant_name">merchantName</string>
+    <string name="approval_type">approvalType</string>
+    <string name="issuer">issuer</string>
+    <string name="datetime">dateTime</string>
+    <string name="currency">currency</string>
+    <string name="amount">amount</string>
+    <string name="key">key</string>
+    <string name="data">data</string>
+    <string name="user_profile_id">userProfileId</string>
+    <string name="update_card">updateCard</string>
+    <string name="link">link</string>
+    <string name="unlink">unlink</string>
+    <string name="select_card_to_start_update_card">Select a card to update card.</string>
+    <string name="extra_issuer_app_card_linked">EXTRA_ISSUER_APP_CARD_LINKED :</string>
+    <string name="total_number_of_cards">Total # of cards: </string>
+    <string name="get_all_cards_user_guide">Select a card item you want to handle, and press OK button.</string>
+    <string name="error_code">Error code</string>
+    <string name="error">Error</string>
+    <string name="unknown">Unknown</string>
+    <string name="on_fail">onFail</string>
+    <string name="on_success">onSuccess</string>
+    <string name="processing">Processing..</string>
+    <string name="extra">Extra</string>
+    <string name="null_string">null</string>
+    <string name="status">Status</string>
+    <string name="more">MORE</string>
+    <string name="mst_nfc">MST + NFC</string>
+    <string name="mst">MST</string>
+    <string name="nfc">NFC</string>
+    <string name="samsung_pay_card">Samsung Pay Card</string>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="token_provider">
+        <item>VI</item>
+        <item>MC</item>
+        <item>MI</item>
+        <item>PB</item>
+        <item>VaccinePass</item>
+    </string-array>
+
+    <string-array name="operation_type">
+        <item>CHARGE</item>
+        <item>ONLINE_PAY</item>
+        <item>WITHDRAW</item>
+        <item>AAVS</item>
+        <item>BALANCE_LIMIT</item>
+    </string-array>
+
+    <string-array name="approval_type">
+        <item>APPROVED</item>
+        <item>CANCELED</item>
+        <item>REJECTED</item>
+    </string-array>
+
+    <string-array name="idv_types">
+        <item>APP2APP</item>
+        <item>SMS</item>
+        <item>EMAIL</item>
+    </string-array>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/top_margin"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/activity_default_margin"
+        android:paddingEnd="@dimen/activity_default_margin"
+        tools:ignore="LabelFor">
+
+        <RelativeLayout
+            android:id="@+id/card_id_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/card_id_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/card_id" />
+
+            <TextView
+                android:id="@+id/card_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/card_id_title"
+                android:gravity="end" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/transaction_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_id_container"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/transaction_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transaction_date" />
+
+            <EditText
+                android:id="@+id/transaction_yyyy_MM_dd_HH_mm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaction_date_title"
+                android:hint="@string/transaction_date_hint"
+                android:inputType="number"
+                android:maxLength="12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/transaction_number_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transaction_date_container"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/transaction_number_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transaction_number" />
+
+            <EditText
+                android:id="@+id/transaction_number_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaction_number_title"
+                android:inputType="number"
+                android:maxLength="14" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transaction_number_container"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/transaction_type_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transaction_type" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/transaction_type_title"
+                android:checkedButton="@+id/mst_nfc_radio_btn"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mst_nfc_radio_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="@string/mst_nfc" />
+
+                <RadioButton
+                    android:id="@+id/mst_radio_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mst" />
+
+                <RadioButton
+                    android:id="@+id/nfc_radio_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/nfc" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/start_simple_pay_for_refund_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/request_refund" />
+    </RelativeLayout>
+</layout>

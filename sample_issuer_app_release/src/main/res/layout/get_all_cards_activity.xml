@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.samsung.android.sdk.spay.sample.issuer.ui.helper.GetAllCardsSelectorActivity">
+
+        <TextView
+            android:id="@+id/total_count_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/activity_default_margin"
+            android:text="@string/total_number_of_cards"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/total_count_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/user_guide_description"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/row_margin"
+            android:layout_toEndOf="@+id/total_count_title"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/user_guide_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_count_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="@dimen/activity_default_margin"
+            android:text="@string/get_all_cards_user_guide" />
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/done"
+            android:layout_below="@+id/user_guide_description"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/row_margin"
+            android:listSelector="@drawable/rectangle_background" />
+
+        <Button
+            android:id="@+id/done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/ok" />
+
+    </RelativeLayout>
+</layout>

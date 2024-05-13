@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingStart="@dimen/activity_default_margin"
+        android:paddingEnd="@dimen/activity_default_margin"
+        tools:ignore="LabelFor">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amount"
+                    android:textSize="@dimen/row_text_size" />
+
+                <EditText
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currency"
+                    android:textSize="@dimen/row_text_size" />
+
+                <EditText
+                    android:id="@+id/currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/datetime"
+                    android:textSize="@dimen/row_text_size" />
+
+                <EditText
+                    android:id="@+id/date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/issuer"
+                    android:textSize="@dimen/row_text_size" />
+
+                <EditText
+                    android:id="@+id/issuer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/approval_type"
+                    android:textSize="@dimen/row_text_size" />
+
+                <Spinner
+                    android:id="@+id/approval_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:entries="@array/approval_type"
+                    android:focusable="true"
+                    android:spinnerMode="dropdown"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/merchant_name"
+                    android:textSize="@dimen/row_text_size" />
+
+                <EditText
+                    android:id="@+id/merchant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_profile_id"
+                    android:textSize="@dimen/row_text_size" />
+
+                <EditText
+                    android:id="@+id/user_profile_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/row_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/row_title_size"
+                    android:layout_height="wrap_content"
+                    android:text="@string/extra_data"
+                    android:textSize="@dimen/row_text_size" />
+
+                <EditText
+                    android:id="@+id/extra_data_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/key"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:textSize="@dimen/row_text_size" />
+            </TableRow>
+
+            <EditText
+                android:id="@+id/extra_data_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/data"
+                android:inputType="text|textNoSuggestions|textVisiblePassword"
+                android:textSize="@dimen/row_text_size" />
+
+            <Button
+                android:id="@+id/send_button"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="onClick"
+                android:text="@string/send_transaction_result_info"
+                android:textAllCaps="false"
+                android:visibility="visible" />
+        </TableLayout>
+    </ScrollView>
+</layout>

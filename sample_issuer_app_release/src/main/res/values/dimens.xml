@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_default_margin">20dp</dimen>
+    <dimen name="fragment_default_margin">10dp</dimen>
+    <dimen name="default_padding">5dp</dimen>
+    <dimen name="top_margin">8dp</dimen>
+    <dimen name="row_margin">5dp</dimen>
+    <dimen name="row_text_size">15sp</dimen>
+    <dimen name="row_title_size">170dp</dimen>
+</resources>

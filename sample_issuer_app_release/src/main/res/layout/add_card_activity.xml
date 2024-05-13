@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false">
+
+        <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_default_margin"
+            android:layout_marginTop="@dimen/top_margin"
+            android:layout_marginEnd="@dimen/activity_default_margin"
+            android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/select_provider_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/token_provider"
+                    tools:text="token provider:" />
+
+                <Spinner
+                    android:id="@+id/tokenization_provider_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/token_provider" />
+            </TableRow>
+
+            <RelativeLayout
+                android:id="@+id/enroll_payload_example_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_provider_layout"
+                android:layout_marginTop="@dimen/top_margin">
+
+                <TextView
+                    android:id="@+id/enroll_payload_example_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/enroll_payload_format_example_notice"
+                    android:textColor="@android:color/holo_red_light" />
+
+            </RelativeLayout>
+
+            <!-- This layout will be visible only for VISA-->
+            <LinearLayout
+                android:id="@+id/get_wallet_info_required_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/enroll_payload_example_layout"
+                android:layout_marginTop="@dimen/top_margin"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/default_padding"
+                    android:paddingEnd="@dimen/default_padding"
+                    android:text="@string/get_wallet_info_required" />
+
+                <Button
+                    android:id="@+id/get_wallet_info_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/get_wallet_info_and_update_payload" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payload_non_encrypted_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/get_wallet_info_required_layout"
+                android:layout_marginTop="@dimen/top_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payload_non_encrypted" />
+
+                <!--Enrollment payload without encryption-->
+                <EditText
+                    android:id="@+id/payload_non_encrypted_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_background"
+                    android:maxLines="15"
+                    android:minLines="10"
+                    android:textAppearance="?android:textAppearanceSmallInverse" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/payload_encrypted_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payload_non_encrypted_layout"
+                android:layout_marginTop="@dimen/top_margin"
+                android:orientation="vertical">
+
+                <!--Enrollment payload example-->
+                <TextView
+                    android:id="@+id/encrypted_payload_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payload_encrypted_guide_title" />
+
+                <!--Plain enrollment payload should be encrypted using card network's specification-->
+                <EditText
+                    android:id="@+id/payload_encrypted_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_background"
+                    android:inputType="text"
+                    android:minLines="1"
+                    android:text="@string/encrypted_payload_example_data" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/payload_encrypted_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payload_encrypted_layout"
+                android:layout_marginTop="@dimen/top_margin"
+                android:text="@string/notice_provider_and_encrypted_payload_should_be_passed_to_add_card_api"
+                android:textColor="@android:color/holo_red_light" />
+
+            <CheckBox
+                android:id="@+id/samsung_pay_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/payload_encrypted_notice"
+                android:layout_marginBottom="@dimen/activity_default_margin"
+                android:text="@string/samsung_pay_card" />
+
+            <LinearLayout
+                style="?attr/buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/samsung_pay_card"
+                android:layout_marginBottom="@dimen/activity_default_margin"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@android:string/cancel" />
+
+                <Button
+                    android:id="@+id/next_button"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@android:string/ok" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</layout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <queries>
+        <package android:name="com.samsung.android.spay" />
+        <package android:name="com.samsung.android.samsungpay.gear" />
+    </queries>
+
+    <!-- DiliTest required permissions -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="MainApplication"
+        android:icon="@mipmap/sample_issuer"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:requestLegacyExternalStorage="true">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="stateHidden"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.status.MyPreferenceActivity"
+            android:label="Preference" />
+        <activity
+            android:name=".ui.helper.GetAllCardsSelectorActivity"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.status.ErrorResultActivity"
+            android:label="@string/error"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.status.SamsungPayStatusActivity"
+            android:label="@string/get_samsung_pay_status"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.extra.UpdateAdditionalServiceActivity"
+            android:label="@string/update_additional_service"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.mst.StartMstActivity"
+            android:label="@string/start_mst"
+            android:parentActivityName=".ui.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".ui.mst.SendTransactionResultInfoActivity"
+            android:label="@string/send_transaction_result_info"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.extra.UpdateCardActivity"
+            android:label="@string/update_card"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.provision.AddCardActivity" />
+        <activity
+            android:name=".ui.extra.StartSimplePayRefundActivity"
+            android:label="@string/request_refund" />
+
+        <meta-data
+            android:name="debug_mode"
+            android:value="@string/gradle_debug_mode" />
+        <meta-data
+            android:name="spay_debug_api_key"
+            android:value="@string/gradle_spay_debug_api_key" />
+        <meta-data
+            android:name="spay_sdk_api_level"
+            android:value="2.18" />
+    </application>
+
+</manifest>

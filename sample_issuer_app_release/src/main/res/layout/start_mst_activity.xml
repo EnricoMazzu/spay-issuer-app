@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_default_margin"
+        android:paddingEnd="@dimen/activity_default_margin"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/end_entity_ca" />
+
+            <!--End-entity CA signed by Samsung Pay server's certificate-->
+            <EditText
+                android:id="@+id/end_entity_ca_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textNoSuggestions|textVisiblePassword"
+                android:maxLines="3"
+                android:text="@string/certificate_example"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intermediate_ca" />
+
+            <!--Intermediate CA from Samsung Pay server-->
+            <EditText
+                android:id="@+id/intermediate_ca_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textNoSuggestions|textVisiblePassword"
+                android:maxLines="3"
+                android:text="@string/certificate_example"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ott" />
+
+            <EditText
+                android:id="@+id/plain_token_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/plain_token_hint"
+                android:inputType="text|textNoSuggestions|textVisiblePassword"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:layout_marginEnd="@dimen/default_padding"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/get_token_encryption_key_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/encrypt_token_using_encryption_key"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginTop="@dimen/top_margin"
+                    android:text="@string/encrypted_token" />
+
+                <!--OTT encrypted using token encryption key from Samsung Pay-->
+                <EditText
+                    android:id="@+id/encrypted_token_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/mandatory_field"
+                    android:inputType="text"
+                    android:maxLines="3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:layout_marginEnd="@dimen/default_padding"
+                android:background="@drawable/rectangle_background"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/sign_token_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_token_using_end_entity_ca"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_padding"
+                    android:layout_marginTop="@dimen/top_margin"
+                    android:text="@string/signed_token" />
+
+                <!--OTT signed with End-entity CA-->
+                <EditText
+                    android:id="@+id/signed_token_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/mandatory_field"
+                    android:inputType="text|textNoSuggestions|textVisiblePassword"
+                    android:maxLines="3" />
+            </LinearLayout>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/duration_time" />
+
+                <!--How long MST transmission will be working-->
+                <EditText
+                    android:id="@+id/duration_time_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/unit_milliseconds"
+                    android:inputType="number|textNoSuggestions|textVisiblePassword"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <CheckBox
+                android:id="@+id/is_retry_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/is_retry" />
+
+            <Button
+                android:id="@+id/start_mst_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_mst" />
+
+            <Button
+                android:id="@+id/stop_mst_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/stop_mst" />
+
+            <Button
+                android:id="@+id/send_transaction_result_info_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/send_transaction_result_info" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

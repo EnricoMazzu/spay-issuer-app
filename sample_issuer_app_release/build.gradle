@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    buildFeatures {
+        dataBinding = true
+    }
+    compileSdkVersion 33
+
+
+    defaultConfig {
+        applicationId "com.samsung.android.sdk.spay.sample.issuer"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode = 300000600
+        versionName = "3.0.00"
+        buildConfigField("boolean", "IS_LEAK_CANARY_ENABLED", "false")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            resValue "string", "gradle_debug_mode", "N"
+            resValue "string", "gradle_server_type", "PRD"
+            resValue "string", "gradle_spay_debug_api_key", ""
+            resValue "string", "gradle_product_id", "7f3695a303ca419ea3fb93"
+        }
+        debug {
+            resValue "string", "gradle_debug_mode", "N"
+            resValue "string", "gradle_server_type", "PRD"
+            resValue "string", "gradle_spay_debug_api_key", ""
+            resValue "string", "gradle_product_id", "7f3695a303ca419ea3fb93"
+        }
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    namespace 'com.samsung.android.sdk.spay.sample.issuer'
+}
+
+dependencies {
+    implementation "androidx.preference:preference-ktx:1.2.1"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
